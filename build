@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo ''
+echo 'Building Front-End app ...'
+echo '--------------------------------------------'
+echo '1. install Webpack and Bower globally:'
+echo ''
+sudo npm install webpack bower -g
+echo '2. install npm dependencies:'
+echo ''
+npm install --no-bin-links
+echo '3. install bower dependencies:'
+echo ''
+bower install
+echo '4. running Webpack and build our app:'
+echo ''
+webpack --colors --progress --display-error-details
+echo 'DONE !!!'
