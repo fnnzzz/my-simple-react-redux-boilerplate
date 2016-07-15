@@ -6,10 +6,12 @@
 2. Babel (ES6/ES7 support)
 3. Redux (with pretty dir's structure for actions, reducers, containers and components)
 4. React-router
-5. Hot Module Replacement with codespliting and dev-server
-6. SASS preprocessor with Bourbon framework
-7. ngrok for tunneling localhost
-8. ... and much more
+5. ESLint
+6. Express dev-server (`node server.js`)
+7. Hot Module Replacement with codespliting and dev-server
+8. SASS preprocessor with Bourbon framework
+9. ngrok for tunneling localhost
+10. ... and much more
 
 ***
 ## How to make it work?
