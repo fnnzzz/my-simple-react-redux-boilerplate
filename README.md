@@ -16,4 +16,4 @@
 1. Clone this repo
 2. Run `npm install` in terminal
 3. Run `npm start`
-4. Go to http://lefund.app:8080
+4. Go to http://localhost:8080 (HMR will immediately work)
