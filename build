@@ -4,9 +4,9 @@ echo ''
 echo 'Building Front-End app ...'
 echo '--------------------------------------------'
 
-echo '1. install Webpack and Bower globally:'
+echo '1. install Webpack, Webpack-dev-server and Bower globally:'
 echo ''
-sudo npm install webpack bower -g
+sudo npm install webpack webpack-dev-server bower -g
 
 echo '2. install npm dependencies:'
 echo ''
