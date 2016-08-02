@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var bourbon = require('node-bourbon').includePaths;
+var autoprefixer = require('autoprefixer');
 
 
 module.exports = {
@@ -34,6 +35,10 @@ module.exports = {
 		includePaths: [bourbon]
   	},
 
+	postcss: function () {
+		return [autoprefixer];
+	},
+
 	module: {
 		preLoaders: [
 			{
@@ -51,14 +56,13 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
 				loaders: ['react-hot', 'babel'],
-				plugins: ['transform-runtime']
 			},
 			{
 				test: /\.css$/,
 				loaders: [
 					'style-loader', 
-					'css-loader', 
-					'autoprefixer-loader'
+					'css-loader',
+					'postcss-loader'
 				]
 			},
 			{
@@ -67,7 +71,7 @@ module.exports = {
 					'style-loader', 
 					'css-loader', 
 					'sass-loader',
-					'autoprefixer-loader'
+					'postcss-loader'
 				]
 			},
             {
