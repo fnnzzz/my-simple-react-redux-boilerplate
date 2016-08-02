@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/fnnzzz/fnnzzz-react-redux-boilerplate#readme",
   "devDependencies": {
-    "autoprefixer-loader": "^3.2.0",
     "babel": "^6.5.2",
     "babel-core": "^6.10.4",
     "babel-eslint": "^6.1.0",
@@ -45,7 +44,6 @@
     "eslint": "^3.0.1",
     "eslint-loader": "^1.4.1",
     "eslint-plugin-react": "^5.2.2",
-    "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.3",
@@ -56,6 +54,7 @@
     "node-sass": "^3.8.0",
     "normalizr": "^2.1.0",
     "path": "^0.12.7",
+    "postcss-loader": "^0.9.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-helmet": "^3.1.0",
