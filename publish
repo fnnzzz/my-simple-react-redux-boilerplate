@@ -1,2 +1,0 @@
-#!/bin/bash
-./ngrok/ngrok http --region eu -host-header=rewrite lefund.app:80

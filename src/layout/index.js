@@ -6,7 +6,6 @@ import reducers from 'reducers'
 
 // middlewares 
 import thunk from 'redux-thunk'
-// import createSagaMiddleware from 'redux-saga'
 
 
 // click/tap handlers for material-ui
@@ -19,10 +18,6 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 
-// redux-sagas
-// import { rootSaga } from 'sagas'
-
-
 // main styles
 import 'assets/styles/main.scss'
 
@@ -32,7 +27,7 @@ import Header from 'components/Header'
 
 const store = createStore(reducers,
 	compose(
-		applyMiddleware(thunk, /* createSagaMiddleware() */),
+		applyMiddleware(thunk),
 		// is here we mount redux-devtool
 		window.devToolsExtension ? window.devToolsExtension() : f => f
 	)

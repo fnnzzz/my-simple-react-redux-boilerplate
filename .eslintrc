@@ -20,6 +20,7 @@
 		"quotes": 0,
 		"no-unused-vars": 1,
 		"comma-dangle": 0,
+		"no-class-assign": 0,
 		"no-mixed-spaces-and-tabs": 1,
 		"jsx-quotes": [2, "prefer-double"],
 		"react/jsx-no-undef": 2,

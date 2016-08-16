@@ -33,7 +33,7 @@ module.exports = {
 	
 	sassLoader: {
 		includePaths: [bourbon]
-  	},
+	},
 
 	postcss: function () {
 		return [autoprefixer];
@@ -74,7 +74,7 @@ module.exports = {
 					'postcss-loader'
 				]
 			},
-            {
+			{
 				test: /\.(ico)$/,
 				loader: "file",
 				query: {
@@ -84,11 +84,11 @@ module.exports = {
 			{
 				test: /\.(png|jpg|gif)$/,
 				loader: "url-loader?limit=5000&name=images/pic-[name].[hash:6].[ext]"
-			}
-            // {
-            //     loader: 'file-loader?name=assets[name]-[hash:6].[ext]',
-            //     test: /\.png($|\?)|\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/
-            // },
+			},
+			{
+				test: /\.(woff|woff2|ttf|eot)$/,
+				loader: 'file-loader?name=fonts/[name].[ext]'
+			},
 		]
 	},
 
@@ -117,17 +117,17 @@ module.exports = {
 			filename: 'commons.bundle.js'
 		}),
 
-        new webpack.ResolverPlugin(
-            new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin(".bower.json", ["bower"])
-        ),
+		new webpack.ResolverPlugin(
+			new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin(".bower.json", ["bower"])
+		),
 
-        new HtmlWebpackPlugin({
-        	template: 'assets/index.html',
-        	filename: 'index.html',
-        	inject: 'body',
-        	// favicon: 'assets/favicon.ico',
-        	hash: true
-        }),
+		new HtmlWebpackPlugin({
+			template: 'assets/index.html',
+			filename: 'index.html',
+			inject: 'body',
+			// favicon: 'assets/favicon.ico',
+			hash: true
+		}),
 
 
 		// FOR PRODUCTION
@@ -160,6 +160,6 @@ module.exports = {
 	},
 
 	watchOptions: {
-	  poll: 2000,
+		poll: 2000,
 	}
 };
