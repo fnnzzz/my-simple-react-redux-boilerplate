@@ -16,6 +16,7 @@
 		"strict": 0,
 		"no-underscore-dangle": 0,
 		"no-use-before-define": 0,
+		"no-undef": 1,
 		"eol-last": 0,
 		"quotes": 0,
 		"no-unused-vars": 1,
