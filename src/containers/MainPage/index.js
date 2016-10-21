@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { checkApp } from 'actions/app'
 
-export default class MainContainer extends Component {
+class MainContainer extends Component {
 	render() {
 		return (
 			<MainPage {...this.props} />
